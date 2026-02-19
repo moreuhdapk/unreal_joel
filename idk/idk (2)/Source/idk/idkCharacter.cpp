@@ -54,6 +54,12 @@ void AidkCharacter::addscore(int64 receive)
 {
 	totalscore += receive;
 	
+	if(totalscore >= 10)
+	{
+		BP_win();
+	}
+	
+	
 }
 
 void AidkCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

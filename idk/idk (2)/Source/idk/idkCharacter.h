@@ -89,7 +89,11 @@ public:
 	/** Handles jump pressed inputs from either controls or UI interfaces */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
-
+	
+	UFUNCTION(BlueprintImplementableEvent)
+	void BP_win();
+	
+	
 public:
 
 	/** Returns CameraBoom subobject **/
@@ -97,5 +101,7 @@ public:
 
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	
+	
 };
 
